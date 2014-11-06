@@ -2,11 +2,12 @@ package michalz.springscala.web
 
 import michalz.springscala.utils.AppLogging
 import michalz.springscala.web.dto.MessageContainer
+import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.{RequestBody, RequestMapping, RequestMethod, RestController}
 
 @RestController
 class HelloWorldController extends AppLogging {
-
+  
   @RequestMapping(Array("/hello"))
   def helloWorldHandler() = {
     info("HelloWorld handler called")
@@ -17,6 +18,6 @@ class HelloWorldController extends AppLogging {
   def readMessage(@RequestBody message: MessageContainer) = {
 
     info("Received message: {}", message.getMessage)
-    new MessageContainer("Received message: " + message.getMessage())
+    new MessageContainer("Message: " + message.getMessage())
   }
 }
