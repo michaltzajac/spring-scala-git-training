@@ -14,9 +14,8 @@ class HelloWorldController extends AppLogging {
     new MessageContainer("Hello World!")
   }
 
-  @RequestMapping(value = Array("/receive"), method = Array(RequestMethod.PUT))
+  @RequestMapping(value = Array("/hello"), method = Array(RequestMethod.PUT))
   def readMessage(@RequestBody message: MessageContainer) = {
-
     info("Received message: {}", message.getMessage)
     new MessageContainer("Message: " + message.getMessage())
   }
