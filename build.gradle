@@ -1,4 +1,3 @@
-//jeszcze jeden comment
 buildscript {
     ext {
         springBootVersion = '1.1.8.RELEASE'
@@ -23,7 +22,6 @@ jar {
 }
 
 
-//jakis comment
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -57,4 +55,3 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
 }
 
-//jeszcze jeden
